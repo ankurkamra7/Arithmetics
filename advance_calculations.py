@@ -8,7 +8,7 @@ print(f"sum: {num1} + {num2} = {sum_result}")
 # Division
 num3 = float(input("Enter the dividend for division: "))
 num4 = float(input("Enter the divisor for division: "))
-if num4 == 0:
+if num4 != 0:  # BUG: Logic error - should be == 0, not != 0
     print("Error: Division by zero is not allowed.")
 else:
     div_result = num3 / num4
@@ -21,7 +21,7 @@ else:
 base = float(input("Enter the length of the base of the triangle: "))
 height = float(input("Enter the height of the triangle: "))
 # Calculate the area of the triangle
-area = 0.5 * base * height
+area = base * height  # BUG: Missing 0.5 multiplier - formula is incorrect
 # Display the result
 print(f"The area of the triangle is: {area}")
 
